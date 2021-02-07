@@ -55,15 +55,15 @@ document.getElementById('button').addEventListener("click", function () {
         const parent2 = document.getElementById('sameFood');
         const meal = food.meals;
         meal.forEach(element => {
-            const li = document.createElement('li');
-            li.innerHTML = `
+            const divName = document.createElement('div');
+            divName.innerHTML = `
             <h1>${element.strMeal} </h1>
             <img src="${element.strMealThumb}" style="width:200px;">
 
             `
-            li.onclick = displayDetail;
+            divName.onclick = displayDetail;
             function displayDetail(){
-              li.innerHTML = `
+                divName.innerHTML = `
               <h1>${element.strMeal} </h1>
               <img src="${element.strMealThumb}" style="width:200px;">
 
@@ -78,8 +78,8 @@ document.getElementById('button').addEventListener("click", function () {
 
               `
             }
-                  
-            parent2.appendChild(li);
+           
+            parent2.appendChild(divName);
 
         })
 
