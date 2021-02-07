@@ -2,11 +2,10 @@
 document.getElementById('button').addEventListener("click", function () {
     const foodName = document.getElementById('inputFoodName').value;
 
-    if(foodName ===''){
+    if(foodName ==='' || !isNaN(foodName)){
         alert("enter food name");
     }
-    
-    
+     
     else{
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`)
         .then(res => res.json())
@@ -54,7 +53,7 @@ document.getElementById('button').addEventListener("click", function () {
 
 document.getElementById('button').addEventListener("click", function () {
     const foodName = document.getElementById('inputFoodName').value;
-    if(foodName === '')
+    if(foodName === '' || !isNaN(foodName))
     {
         alert("enter food name");
     }
