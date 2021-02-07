@@ -1,3 +1,6 @@
+ const anik = document.getElementById('showArea');
+  
+
 
 document.getElementById('button').addEventListener("click", function () {
     const foodName = document.getElementById('inputFoodName').value;
@@ -22,7 +25,7 @@ document.getElementById('button').addEventListener("click", function () {
             `
             parent.onclick= about;
             function about(){
-                parent.innerHTML = `
+                anik.innerHTML = `
                 <img src="${element.strMealThumb}" style="width:200px;">
                 <h1>${element.strMeal} </h1>
                 <ul class="list-unstyled">
@@ -75,7 +78,7 @@ document.getElementById('button').addEventListener("click", function () {
             `
             divName.onclick = displayDetail;
             function displayDetail(){
-                divName.innerHTML = `
+                anik.innerHTML = `
               <img src="${element.strMealThumb}" style="width:200px;">
               <h1>${element.strMeal} </h1>
              <ul class="list-unstyled">
