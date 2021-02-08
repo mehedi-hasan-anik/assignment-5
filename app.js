@@ -21,7 +21,7 @@ document.getElementById('button').addEventListener("click", function () {
         meal.forEach(element => {
             parent.innerHTML = `
             <img src="${element.strMealThumb}" style="width:100%; border-radius:20px 20px 0px 0px">
-            <h1>${element.strMeal} </h1>
+            <h1 style = "fontSize:30px;">${element.strMeal} </h1>
 
             `
             parent.onclick= about;
@@ -29,7 +29,7 @@ document.getElementById('button').addEventListener("click", function () {
                 showDetail.style.display="block";
                 showDetail.innerHTML = `
                 <img src="${element.strMealThumb}" style="width:300px;">
-                <h1>${element.strMeal} </h1>
+                <h1 style = "fontSize:30px;">${element.strMeal} </h1>
                 <ul class="list-unstyled">
 
                 <li> <span>${element.strMeasure1}</span> ${element.strIngredient1} </li>
@@ -83,7 +83,7 @@ document.getElementById('button').addEventListener("click", function () {
             divName.style.cursor = "pointer";
             divName.innerHTML = `
             <img src="${element.strMealThumb}" style="width:100%; border-radius:20px 20px 0px 0px">
-            <h1>${element.strMeal} </h1>
+            <h1 style = "fontSize:30px;">${element.strMeal} </h1>
 
             `
             divName.onclick = displayDetail;
@@ -91,7 +91,7 @@ document.getElementById('button').addEventListener("click", function () {
                 showDetail.style.display="block";
                 showDetail.innerHTML = `
               <img src="${element.strMealThumb}" style="width:300px;">
-              <h1>${element.strMeal} </h1>
+              <h1 style = "fontSize:30px;">${element.strMeal} </h1>
              <ul class="list-unstyled">
 
              <li> <span>${element.strMeasure1}</span> ${element.strIngredient1} </li>
