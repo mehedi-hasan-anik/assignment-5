@@ -16,6 +16,7 @@ document.getElementById('button').addEventListener("click", function () {
         const parent = document.getElementById('namePhoto');
         parent.style.display = "#CCCCCC";
         parent.style.borderRadius ="20px";
+        parent.style.cursor = "pointer";
         const meal = data.meals[0];
         meal.forEach(element => {
             parent.innerHTML = `
@@ -79,6 +80,7 @@ document.getElementById('button').addEventListener("click", function () {
             const divName = document.createElement('div');
             divName.style.background = "#CCCCCC";
             divName.style.borderRadius ="20px";
+            divName.style.cursor = "pointer";
             divName.innerHTML = `
             <img src="${element.strMealThumb}" style="width:100%; border-radius:20px 20px 0px 0px">
             <h1>${element.strMeal} </h1>
