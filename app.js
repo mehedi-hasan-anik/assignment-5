@@ -1,7 +1,5 @@
- const anik = document.getElementById('showArea');
+const showDetail = document.getElementById('showArea');
   
-
-
 document.getElementById('button').addEventListener("click", function () {
     const foodName = document.getElementById('inputFoodName').value;
 
@@ -16,17 +14,20 @@ document.getElementById('button').addEventListener("click", function () {
 
     const display = data => {
         const parent = document.getElementById('namePhoto');
+        parent.style.display = "#CCCCCC";
+        parent.style.borderRadius ="20px";
         const meal = data.meals[0];
         meal.forEach(element => {
             parent.innerHTML = `
-            <img src="${element.strMealThumb}" style="width:200px;">
+            <img src="${element.strMealThumb}" style="width:100%; border-radius:20px 20px 0px 0px">
             <h1>${element.strMeal} </h1>
 
             `
             parent.onclick= about;
             function about(){
-                anik.innerHTML = `
-                <img src="${element.strMealThumb}" style="width:200px;">
+                showDetail.style.display="block";
+                showDetail.innerHTML = `
+                <img src="${element.strMealThumb}" style="width:300px;">
                 <h1>${element.strMeal} </h1>
                 <ul class="list-unstyled">
 
@@ -43,12 +44,17 @@ document.getElementById('button').addEventListener("click", function () {
     
                 `
             }
-            
+           
         })
+        document.getElementById('showArea').innerHTML = '';
+        document.getElementById('showArea').style.display ="none";
+        
 
 
     }
+    document.getElementById('namePhoto').innerHTML = '';
     }
+
 
 })
 
@@ -71,15 +77,18 @@ document.getElementById('button').addEventListener("click", function () {
         const meal = food.meals;
         meal.forEach(element => {
             const divName = document.createElement('div');
+            divName.style.background = "#CCCCCC";
+            divName.style.borderRadius ="20px";
             divName.innerHTML = `
-            <img src="${element.strMealThumb}" style="width:200px;">
+            <img src="${element.strMealThumb}" style="width:100%; border-radius:20px 20px 0px 0px">
             <h1>${element.strMeal} </h1>
 
             `
             divName.onclick = displayDetail;
             function displayDetail(){
-                anik.innerHTML = `
-              <img src="${element.strMealThumb}" style="width:200px;">
+                showDetail.style.display="block";
+                showDetail.innerHTML = `
+              <img src="${element.strMealThumb}" style="width:300px;">
               <h1>${element.strMeal} </h1>
              <ul class="list-unstyled">
 
@@ -98,10 +107,15 @@ document.getElementById('button').addEventListener("click", function () {
             }
            
             parent2.appendChild(divName);
-
+           
         })
+        document.getElementById('showArea').innerHTML = '';
+        document.getElementById('showArea').style.display ="none";
+        
 
     }
+    document.getElementById('sameFood').innerHTML = '';
     }
+
 })
 

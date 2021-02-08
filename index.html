@@ -14,16 +14,21 @@
 
 
 
-    <div class="container">
-        
 
-        <div style="text-align: center; margin-bottom: 50px; margin-top: 20px;">
-            <input placeholder="enter food name" type="text" name="" id="inputFoodName" style="padding: 10px;">
-            <button id="button" style="padding: 10px;">search</button>
+
+    <div class="container">
+
+
+
+        <div style="text-align: center; margin-bottom: 50px; margin-top: 20px; overflow: hidden;">
+            <input placeholder="enter food name" type="text" name="" id="inputFoodName"
+                style="padding: 10px; border: 0; background: #ccc; border-radius: 5px; display: inline-block;">
+            <button id="button" style="padding: 10px; margin: 0; border-radius: 5px; display: inline-block; border: 0;
+        background: #23AAF2;">search</button>
         </div>
 
-        <div id="showArea" style="text-align: center;">
-            
+        <div id="showArea" style=" border: 10px solid grey; margin-bottom: 20px; border-radius: 20px; width: 400px; background: #E9EBEC;">
+
         </div>
 
 
@@ -31,20 +36,20 @@
 
         </div>
 
+
+
+        <div id="sameFood"
+            style="text-align: center; display: grid; grid-template-columns: repeat(3,1fr); grid-gap: 20px; ">
+
+        </div>
+
+        <ul id="catagory">
+
+        </ul>
+
+
+
     </div>
-
-    <div id="sameFood" style="text-align: center; display: grid; grid-template-columns: repeat(3,1fr); grid-gap: 20px; " >
-
-    </div>
-
-    <ul id="catagory">
-
-    </ul>
-
-    </div>
-
-
-
     <script src="app.js"></script>
     <script src="js/bootstrap.min.js"></script>
 

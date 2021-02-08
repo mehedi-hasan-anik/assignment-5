@@ -3,10 +3,22 @@
     padding: 0;
 }
 body{
-    
+    text-align: center;
 }
 .container{
     width: 1180px;
     margin: 0 auto;
     overflow: hidden;
+}
+#namePhoto{
+    
+   
+}
+#showArea{
+    text-align: center;
+    display: none;
+    margin: 0 auto;
+    padding-top: 20px;
+    box-shadow: 10px 10px 30px black;
+   
 }
